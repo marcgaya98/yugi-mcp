@@ -1,0 +1,14 @@
+services:
+  mcp:
+    build:
+      context: .
+      target: production
+    image: yugi-mcp:latest
+    container_name: yugi-mcp-server
+    stdin_open: true
+    environment:
+      - NODE_ENV=production
+      - YUGIOH_API_BASE_URL=${YUGIOH_API_BASE_URL:-http://127.0.0.1:3001/api}
+    network_mode: host
+    restart: "no"
+
