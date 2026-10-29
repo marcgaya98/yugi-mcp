@@ -1,0 +1,33 @@
+{
+  "name": "yugi-mcp",
+  "version": "2.0.0",
+  "description": "Servidor MCP para Yu-Gi-Oh! GX Tag Force Guide - Gateway estandarizado hacia yugioh-ts-ddd",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "test": "node --test dist/tests/**/*.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "yugioh",
+    "tag-force",
+    "model-context-protocol",
+    "clip-search",
+    "ddd"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.1",
+    "axios": "^1.12.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1"
+  }
+}

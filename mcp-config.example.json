@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "yugioh": {
+      "command": "node",
+      "args": [
+        "/home/marc/Projects/ddd/yugi-mcp/dist/server.js"
+      ],
+      "env": {
+        "YUGIOH_API_BASE_URL": "http://localhost:3001/api"
+      }
+    }
+  }
+}
