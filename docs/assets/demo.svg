@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" width="100%" height="100%">
+  <style>
+    .bg { fill: #0d1117; rx: 12px; stroke: #30363d; stroke-width: 1.5px; }
+    .header { fill: #161b22; }
+    .title { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13px; fill: #8b949e; font-weight: 600; }
+    .code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13px; }
+    .prompt { fill: #d2a8ff; font-weight: bold; }
+    .cmd { fill: #e6edf3; }
+    .flag { fill: #79c0ff; }
+    .str { fill: #a5d6ff; }
+    .key { fill: #7ee787; }
+    .num { fill: #ffa657; }
+    .comment { fill: #8b949e; }
+    .badge { fill: #238636; rx: 4px; }
+    .badge-txt { font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11px; fill: #ffffff; font-weight: bold; }
+    .step1 { opacity: 0; animation: fadeIn 8s infinite 0.3s; }
+    .step2 { opacity: 0; animation: fadeIn 8s infinite 1.4s; }
+    .step3 { opacity: 0; animation: fadeIn 8s infinite 2.5s; }
+    .step4 { opacity: 0; animation: fadeIn 8s infinite 3.8s; }
+    @keyframes fadeIn {
+      0%, 5% { opacity: 0; transform: translateY(3px); }
+      12%, 90% { opacity: 1; transform: translateY(0); }
+      96%, 100% { opacity: 0; }
+    }
+  </style>
+
+  <rect class="bg" x="2" y="2" width="916" height="426" rx="12"/>
+  <path class="header" d="M2 14 C2 7.37 7.37 2 14 2 L906 2 C912.63 2 918 7.37 918 14 L918 42 L2 42 Z"/>
+  <line x1="2" y1="42" x2="918" y2="42" stroke="#30363d" stroke-width="1"/>
+
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text class="title" x="460" y="26" text-anchor="middle">yugi-mcp v2.0 — Model Context Protocol (MCP) Server • 22 AI Agent Tools (stdio)</text>
+
+  <g class="code step1">
+    <text x="26" y="74">
+      <tspan class="prompt">[MCP Host → stdio]</tspan>
+      <tspan class="cmd"> {"jsonrpc":"2.0","id":1,"method":</tspan>
+      <tspan class="str">"tools/call"</tspan>
+      <tspan class="cmd">,"params":{"name":</tspan>
+      <tspan class="str">"search_cards_by_visual_description"</tspan>
+      <tspan class="cmd">}}</tspan>
+    </text>
+  </g>
+
+  <g class="code step2">
+    <rect class="badge" x="26" y="88" width="154" height="20"/>
+    <text class="badge-txt" x="34" y="102">STDERR TELEMETRY</text>
+    <text class="comment" x="190" y="102">[INFO] McpToolRegistry dispatched 'search_cards_by_visual_description' (stdout 100% clean)</text>
+  </g>
+
+  <g class="code step3">
+    <text x="26" y="132">
+      <tspan class="flag">[MCP Server → stdout]</tspan>
+      <tspan class="cmd"> {</tspan>
+    </text>
+    <text x="44" y="152"><tspan class="key">"jsonrpc"</tspan><tspan class="cmd">: </tspan><tspan class="str">"2.0"</tspan><tspan class="cmd">, </tspan><tspan class="key">"id"</tspan><tspan class="cmd">: </tspan><tspan class="num">1</tspan><tspan class="cmd">,</tspan></text>
+    <text x="44" y="172"><tspan class="key">"result"</tspan><tspan class="cmd">: {</tspan></text>
+    <text x="64" y="192"><tspan class="key">"content"</tspan><tspan class="cmd">: [{</tspan></text>
+    <text x="84" y="212"><tspan class="key">"type"</tspan><tspan class="cmd">: </tspan><tspan class="str">"text"</tspan><tspan class="cmd">,</tspan></text>
+    <text x="84" y="232"><tspan class="key">"text"</tspan><tspan class="cmd">: </tspan><tspan class="str">"[{\"id\":871,\"name\":\"Headless Knight\",\"similarityScore\":94},{\"id\":2525,\"name\":\"Zombyra the Dark\",\"similarityScore\":93}]"</tspan></text>
+    <text x="64" y="252" class="cmd">}]</text>
+    <text x="44" y="272" class="cmd">}</text>
+    <text x="26" y="292" class="cmd">}</text>
+  </g>
+
+  <g class="code step4">
+    <line x1="26" y1="312" x2="894" y2="312" stroke="#21262d" stroke-width="1"/>
+    <text x="26" y="338">
+      <tspan class="prompt">Registered Tool Families (22 Tools):</tspan>
+    </text>
+    <text x="26" y="362">
+      <tspan class="key">• Catalog (3)</tspan><tspan class="cmd">   </tspan>
+      <tspan class="key">• Obtention &amp; Exclusives (10)</tspan><tspan class="cmd">   </tspan>
+      <tspan class="key">• CLIP Visual AI (4)</tspan><tspan class="cmd">   </tspan>
+      <tspan class="key">• Duelists &amp; Decks (3)</tspan><tspan class="cmd">   </tspan>
+      <tspan class="key">• Banlists &amp; Stats (2)</tspan>
+    </text>
+    <text x="26" y="390">
+      <tspan fill="#3fb950" font-weight="bold">✔ Ready for Claude Desktop, Cursor &amp; MCP Inspector</tspan>
+      <tspan class="comment"> • Segregated ISP Ports + Dynamic OCP Tool Registry</tspan>
+    </text>
+  </g>
+</svg>
